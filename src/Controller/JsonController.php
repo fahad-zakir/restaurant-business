@@ -14,7 +14,7 @@ class JsonController extends AbstractController
     $content = file_get_contents($file);        
     $data = json_decode($content, true);
 
-        return $this->render('json/index.html.twig', [
+        return $this->render('json/homepage.html.twig', [
             'jsonData' => $data,
         ]);
     }

@@ -4,5 +4,5 @@ controllers:
         namespace: App\Controller
     type: attribute
 json_data:
-  path: /json
+  path: /technology/wendys-working-google-test-ai-powered-drive-thru
   controller: App\Controller\JsonController::index
