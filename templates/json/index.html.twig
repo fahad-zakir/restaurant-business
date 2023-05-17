@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
-
 {% block body %}
-    <h1>JSON Data</h1>
-    <p>Name: {{ jsonData.content.node.body.value }}</p>
+    <h1>Technology</h1>
+    <p>{{ jsonData.content.node.title }}</p>
+    <p>{{ jsonData.content.node.body.summary }}</p>
+    {{ jsonData.content.node.body.value|raw }}
+
 {% endblock %}
+
