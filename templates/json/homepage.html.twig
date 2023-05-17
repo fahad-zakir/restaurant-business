@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ jsonData.content.node.title }}{% endblock %}
+
+{% block body %}
+<div id="main-content-wrapper">
+    <section class="container container-article container-article-with-sidebar">
+        <div class="container-article-inner">
+            <header class="article">
+            <span class="category">Technology</span>
+                <h1 class="title">{{ jsonData.content.node.title }}</h1>
+                <span class="deck">{{ jsonData.content.node.body.summary }}</span>
+            </header>
+        </div>
+                {{ jsonData.content.node.body.value|raw }}
+                {{ jsonData.content.node.field_byline[0].body.value|raw }}
+        </div>
+    </section>
+</div>
+{% endblock %}
+
