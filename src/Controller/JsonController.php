@@ -10,7 +10,7 @@ class JsonController extends AbstractController
 {
     public function index(): Response
     {
-    $file = '/Applications/MAMP/htdocs/test-symfony/data.json';
+    $file = '/Applications/MAMP/htdocs/interview_assessment/data.json';
     $content = file_get_contents($file);        
     $data = json_decode($content, true);
 
