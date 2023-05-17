@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <h1>Technology</h1>
+    <h4>Technology</h4>
     {{ jsonData.content.node.uri|raw }}
-    <p>{{ jsonData.content.node.title }}</p>
+    <h1>{{ jsonData.content.node.title }}</h1>
     <p>{{ jsonData.content.node.body.summary }}</p>
     {{ jsonData.content.node.body.value|raw }}
     {{ jsonData.content.node.field_byline[0].body.value|raw }}
