@@ -16,15 +16,19 @@
             </header>
         </div>
         <div class="container-article-wrapper">
-        <div class="container-article-inner">
+        <div class="container-article-inside">
         <article class="article article-post section">
+        <div class="first">
             <img src="{{ asset('drive-thru.jpeg')}}" alt="Square placeholder img" width="500px" height="300px">
             {{ jsonData.content.node.body.value|raw }}
+        </div>
+             <div class="second">
+            <section class="sidebar-section sidebar-recent">
+            {{ jsonData.content.node.field_byline[0].body.value|raw }}
+            </section>
         </article>
         </div>
-                               <div class="container-article-sidebar article">
-            <section class="sidebar-section sidebar-recent">
-<p>cool</p>            </section>
+                              
         </div>
         </div>
     </section>
