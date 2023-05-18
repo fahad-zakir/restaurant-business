@@ -1,37 +1,33 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}{{ jsonData.content.node.title }}{% endblock %}
-
 {% block body %}
 <div id="main-content-wrapper">
-    <section class="container container-article container-article-with-sidebar">
-        <div class="container-article-inner">
-            <header class="article">
+   <section class="container container-article container-article-with-sidebar">
+      <div class="container-article-inner">
+         <header class="article">
             <span class="category">Technology</span>
-                <h1 class="title">{{ jsonData.content.node.title }}</h1>
-                <span class="deck">{{ jsonData.content.node.body.summary }}</span>
-                <span class="byline">
-                    By <a href="/profile/jonathan-maze" class="author-link">Jonathan Maze</a> on May 09, 2023
-                </span>
-            </header>
-        </div>
-        <div class="container-article-wrapper">
-        <div class="container-article-inside">
-        <article class="article article-post section">
-        <div class="first">
-            <img src="{{ asset('drive-thru.jpeg')}}" alt="Square placeholder img" width="500px" height="300px">
-            {{ jsonData.content.node.body.value|raw }}
-        </div>
-        </article>
-                              
-        </div>
-                     <div class="second">
+            <h1 class="title">{{ jsonData.content.node.title }}</h1>
+            <span class="deck">{{ jsonData.content.node.body.summary }}</span>
+            <span class="byline">
+            By <a href="/profile/jonathan-maze" class="author-link">Jonathan Maze</a> on May 09, 2023
+            </span>
+         </header>
+      </div>
+      <div class="container-article-wrapper">
+         <div class="container-article-inside">
+            <article class="article article-post section">
+               <div class="main-article">
+                  <img src="{{ asset('drive-thru.jpeg')}}" alt="Square placeholder img" width="500px" height="300px">
+                  {{ jsonData.content.node.body.value|raw }}
+               </div>
+            </article>
+         </div>
+         <div class="side-section">
             <section class="sidebar-section sidebar-recent">
-            {{ jsonData.content.node.field_byline[0].body.value|raw }}
+               {{ jsonData.content.node.field_byline[0].body.value|raw }}
             </section>
-            </div>
-        </div>
-    </section>
+         </div>
+      </div>
+   </section>
 </div>
 {% endblock %}
-
