@@ -10,10 +10,22 @@
             <span class="category">Technology</span>
                 <h1 class="title">{{ jsonData.content.node.title }}</h1>
                 <span class="deck">{{ jsonData.content.node.body.summary }}</span>
+                <span class="byline">
+                    By <a href="/profile/jonathan-maze" class="author-link">Jonathan Maze</a> on May 09, 2023
+                </span>
             </header>
         </div>
-                {{ jsonData.content.node.body.value|raw }}
-                {{ jsonData.content.node.field_byline[0].body.value|raw }}
+        <div class="container-article-wrapper">
+        <div class="container-article-inner">
+        <article class="article article-post section">
+            <img src="{{ asset('drive-thru.jpeg')}}" alt="Square placeholder img" width="500px" height="300px">
+            {{ jsonData.content.node.body.value|raw }}
+        </article>
+        </div>
+                               <div class="container-article-sidebar article">
+            <section class="sidebar-section sidebar-recent">
+<p>cool</p>            </section>
+        </div>
         </div>
     </section>
 </div>
